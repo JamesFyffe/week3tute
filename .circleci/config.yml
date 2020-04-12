@@ -1,4 +1,6 @@
-version: 2.1
+
+version: 2.1 
+
 
 orbs: 
 
@@ -6,7 +8,7 @@ orbs:
 
 jobs: 
 
-  build: 
+  build-and-test: 
 
     executor: 
 
@@ -22,7 +24,8 @@ jobs:
 
             - run: npm install 
 
-             
+            - run: npm test 
+
 
 workflows: 
 
@@ -30,4 +33,5 @@ workflows:
 
       jobs: 
 
-        - build 
+        - build-and-test 
+
